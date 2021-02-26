@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPORT</title>
+</head>
+<body>
+
+    <h1>1. EDA</h1>
+
+    <div>
+        <h2>apakah Infant Death dan Adult Mortality Rates mempengaruhi Life Expectancy ?</h2>
+
+        <h3>Penjelasan Feature yang digunakan : </h3>
+
+        <ol>
+            <li>Adult Mortality Rates : kemungkinan kematian antara 15 - 60 tahun per 1000 populasi</li>
+            <li>Infant Deaths : jumlah kematian bayi per 1000 populasi</li>
+        </ol>
+
+        <p align="justify">
+            dilihat dari plot dibawah, maka dapat disimpulkan bahwa negara berkembang memiliki tingkat adult_mortality yang jauh lebih tinggi 
+            daripada negara maju. Namun, tidak terlihat adanya tren yang begitu mencolok antara tahun dan adult mortality.
+        </p>
+
+        <center>
+            <img src="../static/all_pic/EDA/adult_mortality_vs_year_status.png" width="1000" height="300">
+            <br><br>
+        </center>
+    
+
+    
+        <p align="justify">
+            pada negara berkembang, angka kematian bayi dari tahun ke tahun mengalami penurunan, mungkin disebabkan karena kemajuan di bidang 
+            medis. pada negara maju, mengingat negara maju kemungkinan memiliki teknologi yang lebih maju juga daripada negara berkembang, 
+            maka sangat sedikit atau hampir tidak ada angka kematian bayi di negara negara yang masuk dalam kategori maju.
+        </p>
+
+        <center>
+            <img src="../static/all_pic/EDA/infant_deaths_vs_year_status.png" width="1000" height="300">
+            <br><br>
+        </center>
+    
+
+    
+        <p align="justify">
+            infant_deaths dan adult_mortality sama sama memiliki korelasi negatif terhadap life_expectancy_, 
+            namun bila dilihat baik dari score maupun plot nya, adult mortality memiliki korelasi yang lebih kuat daripada infant_deaths. 
+            jika suatu negara ingin meningkatkan life_expectancy_ maka mengurangi adult_mortality mungkin menjadi langkah awal yang bagus.
+        </p>
+
+        <center>
+            <img src="../static/all_pic/EDA/life_expectancy_vs_infant_deaths_adult_mortality.png" width="1000" height="300">
+            <br><br>
+        </center>
+        
+
+    </div>
+
+
+    <div>
+
+        <h2>Apakah Schooling mempengaruhi masa hidup ?</h2>
+
+            <h3>Penjelasan Feature yang digunakan : </h3>
+
+            <ol>
+                <li>Schooling : Lama tahun Pendidikan</li>
+            </ol>
+
+            <p align = "justify">
+                seiring berjalannya waktu, dunia pendidikan terus meningkat, baik di negara maju maupun negata berkembang. 
+                namun terlihat jelas bahwa negara berkembang masih ketinggalan jauh meskipun peningkatannya pun sedikit lebih pesat di 
+                negara berkembang daripada negara maju walaupun tidak terlihat jelas.
+            </p>
+
+            <center>
+                <img src="../static/all_pic/EDA/schooling_vs_year_status.png" width="1000" height="300">
+                <br><br>
+            </center>
+
+            <p align="justify">
+                schooling tidak hanya mempengaruhi life_expectancy saja, namun schooling memiliki korelasi dengan beberapa feature lain, 
+                bahkan beberapa feature tersebut juga memiliki korelasi dengan life_expectancy. namun fitur schooling merupakan salah 
+                satu fitur yang kuat korelasinya dengan life_expectancy.
+            </p>
+
+            <center>
+                <img src="../static/all_pic/EDA/life_expectancy_vs_schooling.png" width="1000" height="300">
+                <br><br>
+            </center>
+
+    </div>
+
+    <div>
+
+        <h2>Apakah konsumsi Alkohol mempengaruhi Life Expectancy ?</h2>
+
+            <h3>Penjelasan Feature yang digunakan : </h3>
+
+            <ol>
+                <li>Alcohol : konsumsi per kapita (15+) (dalam liter alkohol murni)
+                </li>
+            </ol>
+
+            <p align="justify">
+                Pada plot dibawah terlihat bahwa negara maju mengkonsumsi lebih banyak alcohol ketimbang negara berkembang, 
+                namun hal yang menarik terjadi di negara maju mulai dari tahun 2013 dan negara berkembang mulai dari tahun 2011 dimana 
+                konsumsi alcohol menurun drastis. Hal ini mungkin bisa terjadi karena diberlakukannya aturan aturan baru tentang 
+                pembatasan konsumsi alkohol
+            </p>
+
+            <center>
+                <img src="../static/all_pic/EDA/alcohol_vs_year_status.png" width="1000" height="300">
+                <br><br>
+            </center>
+
+            <p align="justify">
+                Score korelasi antara life_expectancy dan alcohol termasuk lumayan yaitu 0.4 yang berarti adanya korelasi positif, 
+                ini mungkin dipengaruhi karena mayoritas negara negara yang memiliki life expectancy tinggi ( baik negara maju maupun 
+                berkembang ) gemar mengkonsumsi alkohol
+            </p>
+
+            <center>
+                <img src="../static/all_pic/EDA/life_expectancy_vs_alcohol.png" width="1000" height="300">
+                <br><br>
+            </center>
+
+    </div>
+
+    <div>
+
+        <h2>Apakah negara dengan populasi padat cenderung memiliki Life Expectancy rendah ?</h2>
+
+            <h3>Penjelasan Feature yang digunakan : </h3>
+
+            <ol>
+                <li>population : Populasi suatu negara
+                </li>
+            </ol>
+
+            <p align="justify">
+                Plot dibawah dibuat menggunakan data gabungan 10 negara dengan penduduk padat dan tidak padat. 
+                Terlihat hampir tidak ada perbedaan pada rata-rata life expectancy pada negara penduduk padat maupun yang tidak, 
+                meskipun terlihat bahwa negara penduduk yang padat tampaknya memiliki rata rata life expectancy lebih rendah.
+            </p>
+
+            <center>
+                <img src="../static/all_pic/EDA/country_population_vs_life_expectancy.png" width="1000" height="400">
+                <br><br>
+            </center>
+
+    </div>
+
+    <h1>2. Model Regresi ( Linear Regression )</h1>
+
+    <div>
+
+        <p align = "justify">
+            Dibawah ini adalah plot Magnitude ( coefficient ) semua fitur pada dataset terhadap life Expectancy. 
+            Terlihat bahwa schooling dan income composition of resources memiliki pengaruh positif cukup besar terhadap life expectancy. 
+            Sebaliknya, adult mortality dan hiv/aids memiliki pengaruh negative terhadap life expectancy
+        </p>
+
+        <center>
+            <img src="../static/all_pic/regression/lasso_coeff.png" width="1000" height="500">
+            <br><br>
+        </center>
+
+    </div>
+
+    <div>
+
+        <p align = "justify">
+            Berikut adalah coefficient masing masing fitur yang sudah diseleksi dan digunakan untuk pembuatan model prediksi 
+            ( Linear Regression ), terlihat bahwa income_composition_of_resources adalah fitur paling penting untuk meningkatkan 
+            rata rata masa hidup suatu negara 
+        </p>
+
+        <center>
+            <img src="../static/all_pic/regression/regression_coef.png" width="1000" height="500">
+            <br><br>
+        </center>
+
+    </div>
+
+
+    <h1>3. Model Klasifikasi ( Logistic Regression )</h1>
+
+    <div>
+
+        <p align = "justify">
+            Dibawah ini adalah plot Magnitude ( coefficient ) semua fitur pada dataset terhadap Country Status. 
+            Seperti yang sudah dianalisa sebelumnya, konsumsi alcohol negara negara maju sangat mempengaruhi mesin prediksi kita. 
+            Fitur selanjutnya yang tidak kalah penting adalah fitur life_expectancy, percentage_expenditure dan schooling. 
+            Terlihat juga bahwa semua fitur yang mempengaruhi country status ini memiliki pengaruh yang positif.
+        </p>
+
+        <center>
+            <img src="../static/all_pic/classification/lasso_coef.png" width="1000" height="500">
+            <br><br>
+        </center>
+
+    </div>
+
+    <div>
+
+        <p align = "justify">
+            Berbeda pada saat feature selection, Ketika dilakukan pembuatan model dengan Logistic Regression, 
+            terlihat bahwa schooling memiliki pengaruh positif lebih besar terhadap kemajuan suatu negara, 
+            baru disusul oleh alcohol dan life_expectancy. Terlihat juga bahwa tahun demi tahun, banyak negara yang sebelumnya maju, 
+            menjadi negara berkembang.
+        </p>
+
+        <center>
+            <img src="../static/all_pic/classification/class_coef.png" width="1000" height="500">
+            <br><br>
+        </center>
+
+    </div>
+
+    <h1>Kesimpulan</h1>
+    
+    <div>
+        <ol>
+            <li>
+                infant_deaths dan adult_mortality sama sama memiliki korelasi negatif terhadap life_expectancy
+            </li>
+
+            <li>
+                adult mortality memiliki korelasi yang lebih kuat daripada infant_deaths. 
+            </li>
+
+            <li>
+                negara berkembang masih ketinggalan jauh meskipun peningkatannya pun sedikit lebih pesat di negara berkembang 
+                daripada negara maju walaupun tidak terlihat jelas.
+            </li>
+
+            <li>
+                negara maju mengkonsumsi lebih banyak alcohol ketimbang negara berkembang
+            </li>
+
+            <li>
+                hampir tidak ada perbedaan pada rata-rata life expectancy pada negara penduduk padat maupun yang tidak, 
+                meskipun terlihat bahwa negara penduduk yang padat tampaknya memiliki rata rata life expectancy lebih rendah.
+            </li>
+
+            <li>
+                schooling dan income composition of resources memiliki pengaruh positif cukup besar terhadap life expectancy
+            </li>
+
+            <li>
+                adult mortality dan hiv/aids memiliki pengaruh negative terhadap life expectancy
+            </li>
+
+            <li>
+                income_composition_of_resources adalah fitur paling penting untuk meningkatkan rata rata masa hidup suatu negara 
+            </li>
+
+            <li>
+                schooling memiliki pengaruh positif lebih besar terhadap kemajuan suatu negara, baru disusul oleh alcohol dan life_expectancy.
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

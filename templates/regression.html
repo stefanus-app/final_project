@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALAMAN PREDIKSI LIFE EXPECTANCY</title>
+</head>
+<body>
+    <div class="container fluid">
+
+        <center>
+
+            <form method="POST" action = 'http://127.0.0.1:5000/reg_result'>
+
+
+                <h5>
+
+                    <label for="country">Choose a country:</label>
+                    <!-- hanya diambil 5 sample secara acak saja untuk memudahkan pemilihan negara -->
+                    <select name="country" id="country">
+                      <option value="Germany">Germany</option>
+                      <option value="Indonesia">Indonesia</option>
+                      <option value="Afghanistan">Afghanistan</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Iraq">Iraq</option>
+                    </select> 
+
+                </h5>
+
+
+                <h5>
+
+                    <span>year</span>
+                    <input type="number" name="year" step="1" min="2000" max="2030" placeholder="input year" required/>
+
+                </h5>
+
+                <h5>
+
+                    <span>adult mortality</span>
+                    <input type="number" name="adult_mortality" step=0.1 min="1" max="10000" placeholder="input adult mortality" required/>
+
+                </h5>
+
+                <h5>
+
+                    <span>BMI</span>
+                    <input type="number" name="_bmi_" step=0.1  min="1" max="300" placeholder="input bmi" required/>
+
+                </h5>
+
+                <h5>
+
+                    <span>income composition of resources</span>
+                    <input type="number" name="income_composition_of_resources" step=0.1 min="0" max="100" placeholder="input income_composition_of_resources" required/>
+
+                </h5>
+
+                <h5>
+
+                    <span>schooling</span>
+                    <input type="number" name="schooling" step=0.1 min="0" max="100" placeholder="input schooling" required/>
+
+                </h5>
+
+                <h5>
+
+                    <span>percentage expenditure</span>
+                    <input type="number" name="percentage_expenditure" step=0.1  min="1" max="100000" placeholder="input percentage expenditure" required/>
+
+                </h5>
+
+                
+
+                <h5>
+
+                    <span>under five death</span>
+                    <input type="number" name="under-five_deaths_" step=0.1  min="0" max="100000" placeholder="input under five death" required/>
+
+                </h5>
+
+                <h5>
+
+                    <span>HIV / AIDS</span>
+                    <input type="number" name="_hiv/aids" step=0.1  min="0" max="100" placeholder="input hiv/aids" required/>
+
+                </h5>
+
+                
+                
+
+                
+
+
+                <button style="height: 45px;
+                width: 200px;
+                font-size: 20px;
+                text-align: center;
+                background-color: black;
+                color: cornsilk;
+                type = "button" class="btn btn-info"">PREDICT
+                </button>
+            </form>
+        </center>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALAMAN PREDIKSI COUNTRY STATUS</title>
+</head>
+<body>
+    <div class="container fluid">
+
+        <center>
+
+            <form method="POST" action = 'http://127.0.0.1:5000/class_result'>
+
+
+                <h5>
+
+                    <label for="country">Choose a country:</label>
+                    <!-- hanya diambil 5 sample secara acak saja untuk memudahkan pemilihan negara -->
+                    <select name="country" id="country">
+                      <option value="Germany">Germany</option>
+                      <option value="Indonesia">Indonesia</option>
+                      <option value="Afghanistan">Afghanistan</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Iraq">Iraq</option>
+                    </select> 
+
+                </h5>
+
+
+                <h5>
+
+                    <span>year</span>
+                    <input type="number" name="year" step="1" min="2000" max="2030" placeholder="input year" required/>
+
+                </h5>
+
+                <h5>
+
+                    <span>alcohol</span>
+                    <input type="number" name="alcohol" step=0.1 min="1" max="10000" placeholder="input alcohol" required/>
+
+                </h5>
+
+                <h5>
+
+                    <span>schooling</span>
+                    <input type="number" name="schooling" step=0.1 min="0" max="100" placeholder="input schooling" required/>
+
+                </h5>
+
+                <h5>
+
+                    <span>Life Expectancy</span>
+                    <input type="number" name="life_expectancy_" step=0.1  min="1" max="300" placeholder="input life life_expectancy_" required/>
+
+                </h5>
+               
+                <h5>
+
+                    <span>percentage expenditure</span>
+                    <input type="number" name="percentage_expenditure" step=0.1  min="1" max="100000" placeholder="input percentage expenditure" required/>
+
+                </h5>
+                
+
+
+                <button style="height: 45px;
+                width: 200px;
+                font-size: 20px;
+                text-align: center;
+                background-color: black;
+                color: cornsilk;
+                type = "button" class="btn btn-info"">PREDICT
+                </button>
+            </form>
+        </center>
+
+    </div>
+</body>
+</html>
